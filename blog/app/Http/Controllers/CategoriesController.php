@@ -13,7 +13,7 @@ class CategoriesController extends Controller
     public function categories(){
         $obj = new Categories();
         // $companies = $obj->all();
-        $categories = $obj->paginate(15);
+        $categories = $obj->pluck('category_name', 'category_id');
         return view('categories', ['categories' => $categories]);
     }
 }

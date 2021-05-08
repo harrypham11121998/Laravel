@@ -41,29 +41,19 @@
 </div>
 
 <!-- Table -->
-<table class="table table-dark" style="text-align: center">
-  <thead>
-    <tr style="color: yellow">
-      <!-- <th scope="col" >ID</th> -->
-      <th scope="col">Name</th>
-    </tr>
-    
-  </thead>
-
-<tbody>
-@foreach($categories as $category):
-    <tr>
-    <!-- <th scope="row">{!! $category->category_id !!}</th> -->
-    <td scope="row">{!! $category->category_name !!}</td>
-    </tr>
-@endforeach
-</tbody>
-</table>
-{{$categories->links()}}
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      {{ Form::label('category_id', 'Category :')}}
+      {!! Form::select('category_id', $categories, null, ['class' => 'form-control']) !!}
+    </div>
+    <div class="col-md-9"></div>
+  </div>
+</div>
 
 
 <!--  -->
-  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+  <footer class="pt-4 my-md-5 pt-md-5 border-top" style="text-align:center">
     <div class="row">
       <div class="col-12 col-md">
         <img class="mb-2" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
