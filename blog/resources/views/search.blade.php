@@ -24,10 +24,11 @@
 <body>
 
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-  <h5 class="my-0 mr-md-auto font-weight-normal">Laravel</h5>
+  <h5 class="my-0 mr-md-auto font-weight-normal" style="color:#01DF01">Laravel</h5>
   <nav class="my-2 my-md-0 mr-md-3">
     <a class="p-2 text-dark" href="{{URL::to('/companies')}}">Companies</a>
     <a class="p-2 text-dark" href="{{URL::to('/trainers')}}">Trainers</a>
+    <a class="p-2 text-dark" href="{{URL::to('/categories')}}">Categories</a>
     <!-- <a class="p-2 text-dark" href="{{URL::to('/search')}}">Search</a> -->
     <form action ="{{URL::to('/search')}}" method ="get" class="form-inline my-2 my-lg-0">
       <input name="data_search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -46,9 +47,9 @@
 </div>
 @isset($search_result)
 <!-- Table -->
-<table class="table table-dark">
+<table class="table table-dark" style="text-align: center">
   <thead>
-    <tr>
+    <tr style="color: yellow">
       <th scope="col">ID</th>
       <th scope="col">Name</th>
       <th scope="col">Company_ID</th>

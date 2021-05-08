@@ -16,7 +16,7 @@ class TrainersSeeder extends Seeder
      */
     public function run()
     {
-        for ($i=0; $i <= 5000000  ; $i++) { 
+        for ($i=0; $i <= 500  ; $i++) { 
             DB::table('trainers')->insert(
                 ['trainer_name' => 'LayLalay', 'company_id' => 1, 
                 'trainer_email' => 'bnv@gmail.com', 'trainer_phone' => '01234']
