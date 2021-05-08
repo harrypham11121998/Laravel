@@ -44,8 +44,17 @@
 <div class="container">
   <div class="row">
     <div class="col-md-3">
+
+    <form action ="{{URL::to('/searchCatagory')}}" method ="get" class="form-inline my-2 my-lg-0">
       {{ Form::label('category_id', 'Category :')}}
       {!! Form::select('category_id', $categories, null, ['class' => 'form-control']) !!}
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+
+
+    
+      
+    
     </div>
     <div class="col-md-9"></div>
   </div>

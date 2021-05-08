@@ -16,9 +16,9 @@ class CategoriesSeender extends Seeder
      */
     public function run()
     {
-        for ($i=0; $i <= 500  ; $i++) { 
+        for ($i=0; $i <= 10  ; $i++) { 
             DB::table('categories')->insert(
-                ['category_name' => 'Mr.Cao 2']
+                ['category_name' => 'Mr.Cao']
             );
         }
     }

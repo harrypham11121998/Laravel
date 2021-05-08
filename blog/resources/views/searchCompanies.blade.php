@@ -63,9 +63,10 @@
     <tr>
     <th scope="row">{!! $company->category_id !!}</th>
     <td scope="row">{!! $company->company_name !!}</td>
-    <td scope="row">{!! $company->company_id !!}</td>
-    <td scope="row">{!! $company->trainer_email !!}</td>
-    <td scope="row">{!! $company->trainer_phone !!}</td>
+    <td scope="row">{!! $company->company_web !!}</td>
+    <td scope="row">{!! $company->company_address !!}</td>
+    <td scope="row">{!! $company->company_code !!}</td>
+    <td scope="row">{!! $company->company_phone !!}</td>
     </tr>
 @endforeach
 </tbody>
