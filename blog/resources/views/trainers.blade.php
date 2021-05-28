@@ -29,6 +29,7 @@
     <a class="p-2 text-dark" href="{{URL::to('/companies')}}">Companies</a>
     <a class="p-2 text-dark" href="{{URL::to('/trainers')}}">Trainers</a>
     <a class="p-2 text-dark" href="{{URL::to('/categories')}}">Categories</a>
+    <a class="p-2 text-dark" href="{{URL::to('/categoriescompanies')}}">CategoriesCompanies</a>
     <a class="p-2 text-dark" href="{{URL::to('/search')}}">Seach</a>
             
   </nav>

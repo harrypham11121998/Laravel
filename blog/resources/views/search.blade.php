@@ -29,6 +29,7 @@
     <a class="p-2 text-dark" href="{{URL::to('/companies')}}">Companies</a>
     <a class="p-2 text-dark" href="{{URL::to('/trainers')}}">Trainers</a>
     <a class="p-2 text-dark" href="{{URL::to('/categories')}}">Categories</a>
+    <a class="p-2 text-dark" href="{{URL::to('/categoriescompanies')}}">CategoriesCompanies</a>
     <!-- <a class="p-2 text-dark" href="{{URL::to('/search')}}">Search</a> -->
     <form action ="{{URL::to('/search')}}" method ="get" class="form-inline my-2 my-lg-0">
       <input name="data_search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
