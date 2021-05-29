@@ -16,4 +16,10 @@ class CategoriesController extends Controller
         $categories = $obj->pluck('category_name', 'category_id');
         return view('categories', ['categories' => $categories]);
     }
+
+    public function categoriesCompanies(){
+        $obj = new Categories();
+        $categories = $obj->paginate(15);
+        return view('categoriescompanies', ['categories' =>$categories]);
+    }
 }
