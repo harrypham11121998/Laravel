@@ -1609,16 +1609,6 @@ class Builder
     }
 
     /**
-     * Clone the Eloquent query builder.
-     *
-     * @return static
-     */
-    public function clone()
-    {
-        return clone $this;
-    }
-
-    /**
      * Force a clone of the underlying query builder when cloning.
      *
      * @return void

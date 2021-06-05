@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
@@ -10,9 +11,10 @@ use App\Models\Trainers;
 
 class TrainersController extends Controller
 {
-    public function trainers(){
-        $obj = new Trainers();
-        $trainers = $obj->paginate(15);
-        return view('trainers', ['trainers' => $trainers]);
-    }
+    // public function trainers() {
+    //     $obj = new Trainers();
+    //     $trainers = $obj->all();
+    //     $trainers = $obj->paginate(15);
+    //     return view('trainers', ['trainers' => $trainers]);
+    // }
 }

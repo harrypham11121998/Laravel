@@ -272,7 +272,7 @@ if (! function_exists('throw_if')) {
      *
      * @param  mixed  $condition
      * @param  \Throwable|string  $exception
-     * @param  mixed  ...$parameters
+     * @param  array  ...$parameters
      * @return mixed
      *
      * @throws \Throwable
@@ -297,14 +297,20 @@ if (! function_exists('throw_unless')) {
      *
      * @param  mixed  $condition
      * @param  \Throwable|string  $exception
-     * @param  mixed  ...$parameters
+     * @param  array  ...$parameters
      * @return mixed
      *
      * @throws \Throwable
      */
     function throw_unless($condition, $exception = 'RuntimeException', ...$parameters)
     {
-        throw_if(! $condition, $exception, ...$parameters);
+        if (! $condition) {
+            if (is_string($exception) && class_exists($exception)) {
+                $exception = new $exception(...$parameters);
+            }
+
+            throw is_string($exception) ? new RuntimeException($exception) : $exception;
+        }
 
         return $condition;
     }

@@ -157,10 +157,10 @@ abstract class Queue
                     : serialize(clone $job);
 
         return array_merge($payload, [
-            'data' => array_merge($payload['data'], [
+            'data' => [
                 'commandName' => get_class($job),
                 'command' => $command,
-            ]),
+            ],
         ]);
     }
 

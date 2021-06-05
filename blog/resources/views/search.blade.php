@@ -19,101 +19,41 @@
                 font-family: 'Nunito', sans-serif;
             }
         </style>
-
     </head>
-<body>
+    <body class="antialiased">
 
-<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-  <h5 class="my-0 mr-md-auto font-weight-normal" style="color:#01DF01">Laravel</h5>
-  <nav class="my-2 my-md-0 mr-md-3">
-    <a class="p-2 text-dark" href="{{URL::to('/companies')}}">Companies</a>
-    <a class="p-2 text-dark" href="{{URL::to('/trainers')}}">Trainers</a>
-    <a class="p-2 text-dark" href="{{URL::to('/categories')}}">Categories</a>
-    <!-- <a class="p-2 text-dark" href="{{URL::to('/search')}}">Search</a> -->
-    <form action ="{{URL::to('/search')}}" method ="get" class="form-inline my-2 my-lg-0">
-      <input name="data_search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+        <div class="container">
+            
+            <table class="table">
 
-  </nav>
-  
-</div>
+
+            </table>
+
+        </div>
 
 
 
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <h1 class="display-4">Search</h1>
-  <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.</p>
-</div>
-@isset($search_result)
-<!-- Table -->
-<table class="table table-dark" style="text-align: center">
-  <thead>
-    <tr style="color: yellow">
-      <th scope="col">ID</th>
-      <th scope="col">Name</th>
-      <th scope="col">Company_ID</th>
-      <th scope="col">Email</th>
-      <th scope="col">Phone</th>
-    </tr>
-  </thead>
-<tbody>
-@foreach($search_result as $trainer):
-    <tr>
-    <th scope="row">{!! $trainer->trainer_id !!}</th>
-    <td scope="row">{!! $trainer->trainer_name !!}</td>
-    <td scope="row">{!! $trainer->company_id !!}</td>
-    <td scope="row">{!! $trainer->trainer_email !!}</td>
-    <td scope="row">{!! $trainer->trainer_phone !!}</td>
-    </tr>
-@endforeach
-</tbody>
-</table>
-{{$search_result->links()}}
-@endisset
-
-<!--Footer  -->
-  <footer class="pt-4 my-md-5 pt-md-5 border-top" style="text-align:center">
-    <div class="row">
-      <div class="col-12 col-md">
-        <img class="mb-2" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
-        <small class="d-block mb-3 text-muted">© 2017-2018</small>
-      </div>
-      <div class="col-6 col-md">
-        <h5>Features</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="#">Cool stuff</a></li>
-          <li></li>
-      
-        </ul>
-      </div>
-      <div class="col-6 col-md">
-        <h5>Resources</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="#">Resource</a></li>
-          <li></li>
-          
-          
-        </ul>
-      </div>
-      <div class="col-6 col-md">
-        <h5>About</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="text-muted" href="#">Team</a></li>
-          <li></li>  
-          
-        </ul>
-      </div>
-    </div>
-  </footer>
-</div>
 
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+        <script src="../../assets/js/vendor/popper.min.js"></script>
+        <script src="../../dist/js/bootstrap.min.js"></script>
+        <script src="../../assets/js/vendor/holder.min.js"></script>
+        <script>
+Holder.addTheme('thumb', {
+    bg: '#55595c',
+    fg: '#eceeef',
+    text: 'Thumbnail'
+});
+        </script>
 
-</body>
+
+
+    </body>
+
+    
 </html>
