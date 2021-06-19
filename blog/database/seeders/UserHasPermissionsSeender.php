@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Illuminate\Database\Migrations;
 
-class CategoriesSeender extends Seeder
+class UserHasPermissionsSeender extends Seeder
 {
     /**
      * Run the database seeds.
@@ -18,8 +18,9 @@ class CategoriesSeender extends Seeder
     public function run()
     {
        for ($i=0; $i <= 20; $i++){ //Vòng lặp 20 lần để thêm vào
-        DB::table('categories')->insert([
-            'category_name' => Str::random(5), //Random ki tu
+        DB::table('users_has_permissions')->insert([
+            'permission_id' => mt_rand(0, 20), 
+            'user_id' => mt_rand(0, 20), 
             'status' => 1,
         ]);
        }

@@ -6,6 +6,7 @@ use App\Http\Controllers\TrainersController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\SearchCategory;
+use App\Http\Controllers\CustomAuthController;
 
 
 /*
@@ -29,3 +30,12 @@ Route::get('/trainers', [TrainersController::class, 'trainers']);
 Route::get('/categories', [CategoriesController::class, 'categories']);
 Route::get('/searchCatagory', [SearchCategory::class, 'search']);
 Route::get('/search', [SearchController::class,'search']);
+Route::get('/categoriescompanies', [CategoriesController::class,'categoriesCompanies']);
+
+
+Route::get('dashboard', [CustomAuthController::class, 'dashboard']); 
+Route::get('login', [CustomAuthController::class, 'index'])->name('login');
+Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom'); 
+Route::get('registration', [CustomAuthController::class, 'registration'])->name('register-user');
+Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom'); 
+Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');

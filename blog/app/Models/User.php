@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -10,16 +9,19 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
-
+    protected $primaryKey = 'user_id';
+    protected $with = ['groups','permissions'];
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'user_name',
+        'user_email',
+        'user_password',
+        'user_phone',
+        'user_avatar'
     ];
 
     /**
@@ -31,7 +33,15 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+    public function groups()
+    {
+        return $this->hasMany(Group::class,'group_id');
+    }
 
+    public function permissions()
+    {
+        return $this->hasMany(Permission::class,'permission_id');
+    }
     /**
      * The attributes that should be cast to native types.
      *
@@ -40,4 +50,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function getAuthPassword()
+    {
+        return $this-> user_password;
+    }
+
+    
 }

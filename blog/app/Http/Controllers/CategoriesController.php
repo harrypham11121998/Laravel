@@ -10,10 +10,16 @@ use App\Models\Categories;
 
 class CategoriesController extends Controller
 {
-    public function categories(){
-        $obj = new Categories();
-        // $companies = $obj->all();
-        $categories = $obj->pluck('category_name', 'category_id');
-        return view('categories', ['categories' => $categories]);
-    }
+    // public function categories(){
+    //     $obj = new Categories();
+    //     // $companies = $obj->all();
+    //     $categories = $obj->pluck('category_name', 'category_id');
+    //     return view('categories', ['categories' => $categories]);
+    // }
+
+    // public function categoriesCompanies(){
+    //     $obj = new Categories();
+    //     $categories = $obj->paginate(15);
+    //     return view('categoriescompanies', ['categories' =>$categories]);
+    // }
 }

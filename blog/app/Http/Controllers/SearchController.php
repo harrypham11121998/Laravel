@@ -11,13 +11,13 @@ use App\Models\Trainers;
 
 class SearchController extends Controller
 {
-    public function search(Request $request){
-        $obj = new Trainers();
-        $key = $request->input('data_search');
-        if($key){
-            $search_result = $obj->search($key);
-            return view('search', ['search_result' => $search_result]);
-        }
-        return view('search', []);
-    }
+    // public function search(Request $request){
+    //     $obj = new Trainers();
+    //     $key = $request->input('data_search');
+    //     if($key){
+    //         $search_result = $obj->search($key);
+    //         return view('search', ['search_result' => $search_result]);
+    //     }
+    //     return view('search', []);
+    // }
 }
